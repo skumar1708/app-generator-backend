@@ -305,6 +305,23 @@
           "slug": "itbhusks-projects"
         }
       }
+    },
+    {
+      "repo": "app-1741072439030",
+      "deployConfig": {
+        "deploymentId": "dpl_HuN6f4bNyKrhUTrZk5ARK9aQSSQ3",
+        "deploymentURL": "my-project-itbhusks-projects.vercel.app",
+        "project": {
+          "id": "prj_5kriyVMDTAUSV8GDrf1LFiUjD0iG",
+          "name": "my-project",
+          "framework": null
+        },
+        "team": {
+          "id": "team_UdSGHNxyVEZUCDCDNHPMgEv4",
+          "name": "itbhusk's projects",
+          "slug": "itbhusks-projects"
+        }
+      }
     }
   ]
 }

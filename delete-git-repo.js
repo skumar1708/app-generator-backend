@@ -60,7 +60,7 @@ async function getFolderNames(directoryPath) {
 // Example usage:
 const owner = "skumar1708"; // Replace with the repository owner's username
 const repo = "app-1740483593831";       // Replace with the repository name
-const token = "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";     // Replace with your GitHub personal access token
+const token = "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";     // Replace with your GitHub personal access token
 
 async function deleteGitHubReposRobust(owner, token) {
     const directoryPath = path.resolve(__dirname, "generated");
