@@ -1,15 +1,15 @@
-import { Vercel } from '@vercel/sdk';
-// import { info } from "./logger.js";
- 
-const VERCEL_TOKEN = process.env.VERCEL_TOKEN;
-const GITHUB_REPO = "app-1740407803022"; // Change this
-const BRANCH = "main";
-const vercel = new Vercel({
-  bearerToken: "tq93O1cRe08H1RaTiJzyU92I",
-});
- 
 async function createAndCheckDeployment(repoName, socket) {
   try {
+    // Dynamically import the Vercel SDK
+    const { Vercel } = await import('@vercel/sdk');
+
+    const VERCEL_TOKEN = process.env.VERCEL_TOKEN;
+    const GITHUB_REPO = "app-1740407803022"; // Change this
+    const BRANCH = "main";
+    const vercel = new Vercel({
+      bearerToken: "tq93O1cRe08H1RaTiJzyU92I",
+    });
+
     // Create a new deployment
     const createResponse = await vercel.deployments.createDeployment({
       requestBody: {
@@ -22,27 +22,27 @@ async function createAndCheckDeployment(repoName, socket) {
           org: 'skumar1708', //For a personal account, the org-name is your GH username
         },
         projectSettings: {
-            buildCommand: "npm run build",
-            commandForIgnoringBuildStep: null,
-            devCommand: "npm start",
-            framework: null,
-            installCommand: "npm install",
-            nodeVersion: '22.x',
-            outputDirectory: null,
-            rootDirectory: "frontend",
-            serverlessFunctionRegion: null,
-            skipGitConnectDuringLink: true,
-            sourceFilesOutsideRootDirectory: true
+          buildCommand: "npm run build",
+          commandForIgnoringBuildStep: null,
+          devCommand: "npm start",
+          framework: null,
+          installCommand: "npm install",
+          nodeVersion: '22.x',
+          outputDirectory: null,
+          rootDirectory: "frontend",
+          serverlessFunctionRegion: null,
+          skipGitConnectDuringLink: true,
+          sourceFilesOutsideRootDirectory: true
         }
       },
     });
- 
+
     const deploymentId = createResponse.id;
- 
+
     console.log(
       `Deployment created: ID ${deploymentId} and status ${createResponse.status}`,
     );
- 
+
     // Check deployment status
     let deploymentStatus;
     let deploymentURL;
@@ -51,25 +51,25 @@ async function createAndCheckDeployment(repoName, socket) {
     // info(createResponse);
     do {
       await new Promise((resolve) => setTimeout(resolve, 5000)); // Wait 5 seconds between checks
-       statusResponse = await vercel.deployments.getDeployment({
+      statusResponse = await vercel.deployments.getDeployment({
         idOrUrl: deploymentId,
         withGitRepoInfo: 'true',
       });
- 
+
       deploymentStatus = statusResponse.status;
       deploymentURL = statusResponse.url;
       aliases = statusResponse.alias;
       console.log(`Deployment status: ${deploymentStatus}`);
     } while (
       (deploymentStatus === 'BUILDING' ||
-      deploymentStatus === 'INITIALIZING' || aliases.length <= 2) && deploymentStatus !== "ERROR"
+        deploymentStatus === 'INITIALIZING' || aliases.length <= 2) && deploymentStatus !== "ERROR"
     );
- 
+
     if (deploymentStatus === 'READY') {
       console.log(`Deployment successful. URL: ${deploymentURL}`);
       console.log(`Alliases  URL: ${aliases[0]}`);
- 
-      return { deployConfig: { deploymentId, deploymentURL: aliases[0],  project: {...statusResponse.project }, team: { ...statusResponse.team } } }
+
+      return { deployConfig: { deploymentId, deploymentURL: aliases[0], project: { ...statusResponse.project }, team: { ...statusResponse.team } } }
     } else {
       console.log('Deployment failed or was canceled');
       return null;
@@ -81,8 +81,6 @@ async function createAndCheckDeployment(repoName, socket) {
   }
 }
 
-// createAndCheckDeployment("app-1740470869059");
- 
 export default {
-    createAndCheckDeployment
-}
+  createAndCheckDeployment
+};
