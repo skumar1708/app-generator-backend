@@ -288,6 +288,23 @@
           "slug": "itbhusks-projects"
         }
       }
+    },
+    {
+      "repo": "app-1741071227743",
+      "deployConfig": {
+        "deploymentId": "dpl_FK2gQCpnpKEixJynKQfJvsi8eSZn",
+        "deploymentURL": "my-project-eta-indol.vercel.app",
+        "project": {
+          "id": "prj_5kriyVMDTAUSV8GDrf1LFiUjD0iG",
+          "name": "my-project",
+          "framework": null
+        },
+        "team": {
+          "id": "team_UdSGHNxyVEZUCDCDNHPMgEv4",
+          "name": "itbhusk's projects",
+          "slug": "itbhusks-projects"
+        }
+      }
     }
   ]
 }

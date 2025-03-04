@@ -1,5 +1,5 @@
-const { Vercel } =  require('@vercel/sdk');
-const logger = require("./logger");
+import { Vercel } from '@vercel/sdk';
+// import { info } from "./logger.js";
  
 const VERCEL_TOKEN = process.env.VERCEL_TOKEN;
 const GITHUB_REPO = "app-1740407803022"; // Change this
@@ -48,7 +48,7 @@ async function createAndCheckDeployment(repoName, socket) {
     let deploymentURL;
     let aliases;
     let statusResponse;
-    logger.info(createResponse);
+    // info(createResponse);
     do {
       await new Promise((resolve) => setTimeout(resolve, 5000)); // Wait 5 seconds between checks
        statusResponse = await vercel.deployments.getDeployment({
@@ -83,6 +83,6 @@ async function createAndCheckDeployment(repoName, socket) {
 
 // createAndCheckDeployment("app-1740470869059");
  
-module.exports = {
+export default {
     createAndCheckDeployment
 }

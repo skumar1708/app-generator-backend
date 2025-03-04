@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 
 const GITHUB_USERNAME = "skumar1708";
-const GITHUB_TOKEN = process.env.GIT_HUB_PAT || "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"; // Use env variables for security
+const GITHUB_TOKEN = process.env.GIT_HUB_PAT || "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"; // Use env variables for security
 // let APP_NAME = `app-1740377501788`;
 
 // const REPO_PATH = path.resolve(__dirname, "generated", APP_NAME); // Push all contents inside repo folder
