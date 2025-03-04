@@ -1,0 +1,11 @@
+{
+    "ignore": [
+      "test/*",
+      "generated/*",
+      "package.json",
+      "projects.json",
+      "[DNU].vercel-deploy.js",
+      "nodemon.json"
+    ],
+    "exec": "node server.js"
+  }

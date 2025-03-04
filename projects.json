@@ -1,0 +1,293 @@
+{
+  "projects": [
+    {
+      "repo": "app-1740717368029",
+      "deployConfig": {
+        "deploymentId": "dpl_HJW8Zy6BynSY24U2tpK1QXf7s6dj",
+        "deploymentURL": "my-project-eta-indol.vercel.app",
+        "project": {
+          "id": "prj_5kriyVMDTAUSV8GDrf1LFiUjD0iG",
+          "name": "my-project",
+          "framework": null
+        },
+        "team": {
+          "id": "team_UdSGHNxyVEZUCDCDNHPMgEv4",
+          "name": "itbhusk's projects",
+          "slug": "itbhusks-projects"
+        }
+      }
+    },
+    {
+      "repo": "app-1740717953127",
+      "deployConfig": {
+        "deploymentId": "dpl_2eTsp6ACmxC1ukCsH1T2i6mGYZs3",
+        "deploymentURL": "my-project-eta-indol.vercel.app",
+        "project": {
+          "id": "prj_5kriyVMDTAUSV8GDrf1LFiUjD0iG",
+          "name": "my-project",
+          "framework": null
+        },
+        "team": {
+          "id": "team_UdSGHNxyVEZUCDCDNHPMgEv4",
+          "name": "itbhusk's projects",
+          "slug": "itbhusks-projects"
+        }
+      }
+    },
+    {
+      "repo": "app-1740718397576",
+      "deployConfig": {
+        "deploymentId": "dpl_UL8y7NpzsERnLG4QbzimZ58H4VHE",
+        "deploymentURL": "my-project-eta-indol.vercel.app",
+        "project": {
+          "id": "prj_5kriyVMDTAUSV8GDrf1LFiUjD0iG",
+          "name": "my-project",
+          "framework": null
+        },
+        "team": {
+          "id": "team_UdSGHNxyVEZUCDCDNHPMgEv4",
+          "name": "itbhusk's projects",
+          "slug": "itbhusks-projects"
+        }
+      }
+    },
+    {
+      "repo": "app-1740718699536",
+      "deployConfig": {
+        "deploymentId": "dpl_9wo5yUUuvMCnYExtgPj9JKJxavUh",
+        "deploymentURL": "my-project-eta-indol.vercel.app",
+        "project": {
+          "id": "prj_5kriyVMDTAUSV8GDrf1LFiUjD0iG",
+          "name": "my-project",
+          "framework": null
+        },
+        "team": {
+          "id": "team_UdSGHNxyVEZUCDCDNHPMgEv4",
+          "name": "itbhusk's projects",
+          "slug": "itbhusks-projects"
+        }
+      }
+    },
+    {
+      "repo": "app-1740820274716",
+      "deployConfig": {
+        "deploymentId": "dpl_B2KbWbagRmxwzKHXpQCrfCLTidKf",
+        "deploymentURL": "my-project-itbhusks-projects.vercel.app",
+        "project": {
+          "id": "prj_5kriyVMDTAUSV8GDrf1LFiUjD0iG",
+          "name": "my-project",
+          "framework": null
+        },
+        "team": {
+          "id": "team_UdSGHNxyVEZUCDCDNHPMgEv4",
+          "name": "itbhusk's projects",
+          "slug": "itbhusks-projects"
+        }
+      }
+    },
+    {
+      "repo": "app-1740821003945",
+      "deployConfig": {
+        "deploymentId": "dpl_BHMh5UeAo8Hcc8qHfe2A6UgTTCGF",
+        "deploymentURL": "my-project-git-main-itbhusks-projects.vercel.app",
+        "project": {
+          "id": "prj_5kriyVMDTAUSV8GDrf1LFiUjD0iG",
+          "name": "my-project",
+          "framework": null
+        },
+        "team": {
+          "id": "team_UdSGHNxyVEZUCDCDNHPMgEv4",
+          "name": "itbhusk's projects",
+          "slug": "itbhusks-projects"
+        }
+      }
+    },
+    {
+      "repo": "app-1740821528494",
+      "deployConfig": {
+        "deploymentId": "dpl_Ah4bfWheLnrbEJGo5Fi4HMy9MEzr",
+        "deploymentURL": "my-project-eta-indol.vercel.app",
+        "project": {
+          "id": "prj_5kriyVMDTAUSV8GDrf1LFiUjD0iG",
+          "name": "my-project",
+          "framework": null
+        },
+        "team": {
+          "id": "team_UdSGHNxyVEZUCDCDNHPMgEv4",
+          "name": "itbhusk's projects",
+          "slug": "itbhusks-projects"
+        }
+      }
+    },
+    {
+      "repo": "app-1740895415589",
+      "deployConfig": {
+        "deploymentId": "dpl_BmNLWdyAxZinw6C689f1yLwQaW2e",
+        "deploymentURL": "my-project-git-main-itbhusks-projects.vercel.app",
+        "project": {
+          "id": "prj_5kriyVMDTAUSV8GDrf1LFiUjD0iG",
+          "name": "my-project",
+          "framework": null
+        },
+        "team": {
+          "id": "team_UdSGHNxyVEZUCDCDNHPMgEv4",
+          "name": "itbhusk's projects",
+          "slug": "itbhusks-projects"
+        }
+      }
+    },
+    {
+      "repo": "app-1740979051421",
+      "deployConfig": {
+        "deploymentId": "dpl_Gb3TcFaNW4pPV3geb3FqawjXVkH6",
+        "deploymentURL": "my-project-git-main-itbhusks-projects.vercel.app",
+        "project": {
+          "id": "prj_5kriyVMDTAUSV8GDrf1LFiUjD0iG",
+          "name": "my-project",
+          "framework": null
+        },
+        "team": {
+          "id": "team_UdSGHNxyVEZUCDCDNHPMgEv4",
+          "name": "itbhusk's projects",
+          "slug": "itbhusks-projects"
+        }
+      }
+    },
+    {
+      "repo": "app-1740980746938",
+      "deployConfig": {
+        "deploymentId": "dpl_B5zq1Bkc6oKSfza9kRBNv3SQrDpz",
+        "deploymentURL": "my-project-eta-indol.vercel.app",
+        "project": {
+          "id": "prj_5kriyVMDTAUSV8GDrf1LFiUjD0iG",
+          "name": "my-project",
+          "framework": null
+        },
+        "team": {
+          "id": "team_UdSGHNxyVEZUCDCDNHPMgEv4",
+          "name": "itbhusk's projects",
+          "slug": "itbhusks-projects"
+        }
+      }
+    },
+    {
+      "repo": "app-1740981547667",
+      "deployConfig": {
+        "deploymentId": "dpl_2WEPH4aRaPQcPqhud7jpk6mZduWm",
+        "deploymentURL": "my-project-git-main-itbhusks-projects.vercel.app",
+        "project": {
+          "id": "prj_5kriyVMDTAUSV8GDrf1LFiUjD0iG",
+          "name": "my-project",
+          "framework": null
+        },
+        "team": {
+          "id": "team_UdSGHNxyVEZUCDCDNHPMgEv4",
+          "name": "itbhusk's projects",
+          "slug": "itbhusks-projects"
+        }
+      }
+    },
+    {
+      "repo": "app-1740981835059",
+      "deployConfig": {
+        "deploymentId": "dpl_SUPaaQMfAW4hiyM2G2iMEa6tcxfb",
+        "deploymentURL": "my-project-itbhusks-projects.vercel.app",
+        "project": {
+          "id": "prj_5kriyVMDTAUSV8GDrf1LFiUjD0iG",
+          "name": "my-project",
+          "framework": null
+        },
+        "team": {
+          "id": "team_UdSGHNxyVEZUCDCDNHPMgEv4",
+          "name": "itbhusk's projects",
+          "slug": "itbhusks-projects"
+        }
+      }
+    },
+    {
+      "repo": "app-1740982415609",
+      "deployConfig": {
+        "deploymentId": "dpl_ArqQUySVqr2td5mk7gbViQvpRVox",
+        "deploymentURL": "my-project-itbhusks-projects.vercel.app",
+        "project": {
+          "id": "prj_5kriyVMDTAUSV8GDrf1LFiUjD0iG",
+          "name": "my-project",
+          "framework": null
+        },
+        "team": {
+          "id": "team_UdSGHNxyVEZUCDCDNHPMgEv4",
+          "name": "itbhusk's projects",
+          "slug": "itbhusks-projects"
+        }
+      }
+    },
+    {
+      "repo": "app-1740982570346",
+      "deployConfig": {
+        "deploymentId": "dpl_8EzwGVHxp5Q5N2yUDgzu4E8jPgtS",
+        "deploymentURL": "my-project-itbhusks-projects.vercel.app",
+        "project": {
+          "id": "prj_5kriyVMDTAUSV8GDrf1LFiUjD0iG",
+          "name": "my-project",
+          "framework": null
+        },
+        "team": {
+          "id": "team_UdSGHNxyVEZUCDCDNHPMgEv4",
+          "name": "itbhusk's projects",
+          "slug": "itbhusks-projects"
+        }
+      }
+    },
+    {
+      "repo": "app-1740982882661",
+      "deployConfig": {
+        "deploymentId": "dpl_Ht7VS1t5cu1opRD2LxBw2KFYdm4R",
+        "deploymentURL": "my-project-itbhusks-projects.vercel.app",
+        "project": {
+          "id": "prj_5kriyVMDTAUSV8GDrf1LFiUjD0iG",
+          "name": "my-project",
+          "framework": null
+        },
+        "team": {
+          "id": "team_UdSGHNxyVEZUCDCDNHPMgEv4",
+          "name": "itbhusk's projects",
+          "slug": "itbhusks-projects"
+        }
+      }
+    },
+    {
+      "repo": "app-1740996286791",
+      "deployConfig": {
+        "deploymentId": "dpl_ESAy87DrbdyngwFH9avBT3bXZAdK",
+        "deploymentURL": "my-project-git-main-itbhusks-projects.vercel.app",
+        "project": {
+          "id": "prj_5kriyVMDTAUSV8GDrf1LFiUjD0iG",
+          "name": "my-project",
+          "framework": null
+        },
+        "team": {
+          "id": "team_UdSGHNxyVEZUCDCDNHPMgEv4",
+          "name": "itbhusk's projects",
+          "slug": "itbhusks-projects"
+        }
+      }
+    },
+    {
+      "repo": "app-1741053779863",
+      "deployConfig": {
+        "deploymentId": "dpl_FRUcuk2teqWnwEU7XJ2i8VKDarB2",
+        "deploymentURL": "my-project-git-main-itbhusks-projects.vercel.app",
+        "project": {
+          "id": "prj_5kriyVMDTAUSV8GDrf1LFiUjD0iG",
+          "name": "my-project",
+          "framework": null
+        },
+        "team": {
+          "id": "team_UdSGHNxyVEZUCDCDNHPMgEv4",
+          "name": "itbhusk's projects",
+          "slug": "itbhusks-projects"
+        }
+      }
+    }
+  ]
+}
