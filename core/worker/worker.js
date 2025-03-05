@@ -3,6 +3,8 @@ const projectService = require("../service/projectService");
 
 const { appName, prompt } = workerData;
 
+console.log("Worker started:", workerData);
+
 async function createProject() {
   try {
     parentPort.postMessage({ status: "Generating project structure..." });
