@@ -4,6 +4,7 @@ const { Worker } = require("worker_threads");
 const rateLimiter = require("../middleware/rateLimiter");
 const statusTracker = require("../state/statusTracker");
 require('dotenv').config();
+const path = require("path");
 
 const app = express();
 app.use(express.json());
@@ -28,7 +29,7 @@ app.post("/generateProject", (req, res) => {
   statusTracker.addStatus(appName, "Project creation started...");
 
   // Start a new worker thread
-  const worker = new Worker("./core/worker/worker.js", { workerData: { appName, prompt } });
+  const worker = new Worker(path.resolve(__dirname, "./core/worker/worker.js"), { workerData: { appName, prompt } });
 
   worker.on("message", (message) => {
     if (message.status) {
