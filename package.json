@@ -4,7 +4,6 @@
   "main": "index.js",
   "scripts": {
     "start": "node core",
-    "build": "echo 'Building for production... (optional)'",
     "dev": "nodemon server.js"
   },
   "keywords": [],
