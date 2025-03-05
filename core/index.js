@@ -29,7 +29,7 @@ app.post("/generateProject", (req, res) => {
   statusTracker.addStatus(appName, "Project creation started...");
 
   // Start a new worker thread
-  const workerPath = path.resolve(__dirname, "./worker/worker.js");
+  const workerPath = path.join(process.cwd(), "core", "worker",  "worker.js");
   console.log("Worker path", workerPath);
   const worker = new Worker(workerPath, { workerData: { appName, prompt } });
 
