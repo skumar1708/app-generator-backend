@@ -1,6 +1,7 @@
 const axios = require("axios");
 const fs = require("fs");
 const path = require("path");
+require('dotenv').config();
 
 const GITHUB_USERNAME = "skumar1708";
 const GITHUB_TOKEN = process.env.GIT_HUB_PAT;
@@ -72,7 +73,7 @@ async function uploadFolder(folderPath, relativePath = "", APP_NAME) {
 }
 
 const gitPusher  =  async (appName) => {
-  const REPO_PATH = path.resolve(__dirname, "generated", appName);
+  const REPO_PATH =  path.resolve(process.cwd(), "generated", appName);
   await createRepo(appName);
   await uploadFolder(REPO_PATH, "", appName);
   console.log("Repository upload complete!");

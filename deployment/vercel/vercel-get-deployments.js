@@ -1,5 +1,5 @@
 const { Vercel } =  require('@vercel/sdk');
-const logger = require('./logger');
+const logger = require('../../core/util/logger');
 
 const vercel = new Vercel({
     bearerToken: "tq93O1cRe08H1RaTiJzyU92I",
