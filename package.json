@@ -4,7 +4,6 @@
   "main": "index.js",
   "scripts": {
     "start": "node core",
-    "build": "echo 'Building for production... (optional)'",
     "dev": "nodemon server.js"
   },
   "keywords": [],
@@ -18,8 +17,9 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
     "firebase-admin": "^13.1.0",
- "nodemon": "^3.1.9",
+    "nodemon": "^3.1.9",
     "openai": "^4.85.2",
     "socket.io": "^4.8.1",
     "winston": "^3.17.0"
