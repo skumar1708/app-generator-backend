@@ -9,6 +9,7 @@ const path = require("path");
 const app = express();
 app.use(express.json());
 app.use(cors());
+app.use(express.static("public"));
 
 // app.use(rateLimiter);
 
@@ -29,7 +30,7 @@ app.post("/generateProject", (req, res) => {
   statusTracker.addStatus(appName, "Project creation started...");
 
   // Start a new worker thread
-  const workerPath = path.resolve(process.cwd(), "worker.js");
+  const workerPath = path.resolve(process.cwd(), "public/worker.js");
   console.log("Worker path", workerPath);
   const worker = new Worker(workerPath, { workerData: { appName, prompt } });
 
