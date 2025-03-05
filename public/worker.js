@@ -1,5 +1,5 @@
 const { parentPort, workerData } = require("worker_threads");
-const projectService = require("./core/service/projectService");
+const projectService = require("../core/service/projectService");
 
 const { appName, prompt } = workerData;
 
