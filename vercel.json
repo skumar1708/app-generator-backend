@@ -6,6 +6,7 @@
         "use": "@vercel/node"
       }
     ],
+    "includeFiles": ["worker.js"],
     "routes": [
       {
         "src": "/(.*)",
