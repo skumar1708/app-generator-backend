@@ -11,5 +11,6 @@
         "src": "/(.*)",
         "dest": "/core/index.js"
       }
-    ]
+    ],
+    "files": ["core/worker/worker.js"]
   }
