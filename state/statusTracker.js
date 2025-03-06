@@ -15,7 +15,7 @@ function updateStatus(appName, status, url) {
 }
 
 function getStatuses(appName) {
-  return projectStatuses[appName];
+  return projectStatuses[appName] || {};
 }
 
 function removeApp(appName){
