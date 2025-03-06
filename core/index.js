@@ -3,6 +3,7 @@ const cors = require("cors");
 const { Worker } = require("worker_threads");
 const rateLimiter = require("../middleware/rateLimiter");
 const statusTracker = require("../state/statusTracker");
+const projectService = require("./service/projectService");
 require('dotenv').config();
 const path = require("path");
 
@@ -17,8 +18,16 @@ app.use(express.static("public"));
 app.get("/healthcheck", (req, res) => res.send("Working fine"));
 
 // Status Endpoint: Check ongoing project creations
-app.get("/status", (req, res) => {
-  res.json(statusTracker.getStatuses());
+app.post("/status", (req, res) => {
+  const { appName } = req.body;
+  res.json(statusTracker.getStatuses(appName));
+});
+
+app.post("/deployed", (req) => {
+  const { appName, url, status } = req.body;
+  console.log("Deployment done callback for ", appName);
+
+  statusTracker.updateStatus(appName, status, url);
 });
 
 // Generate Project (Offloads to Worker)
@@ -27,27 +36,28 @@ app.post("/generateProject", (req, res) => {
   if (!prompt) return res.status(400).json({ error: "Prompt is required" });
 
   const appName = `app-${Date.now()}`;
-  statusTracker.addStatus(appName, "Project creation started...");
+
+  projectService.generateProject(appName, prompt, req, res);
 
   // Start a new worker thread
-  const workerPath = path.resolve(process.cwd(), "public/worker.js");
-  console.log("Worker path", workerPath);
-  const worker = new Worker(workerPath, { workerData: { appName, prompt } });
+  // const workerPath = path.resolve(process.cwd(), "public/worker.js");
+  // console.log("Worker path", workerPath);
+  // const worker = new Worker(workerPath, { workerData: { appName, prompt } });
 
-  worker.on("message", (message) => {
-    if (message.status) {
-      statusTracker.updateStatus(appName, message.status, message?.url);
-    }
-  });
+  // worker.on("message", (message) => {
+  //   if (message.status) {
+  //     statusTracker.updateStatus(appName, message.status, message?.url);
+  //   }
+  // });
 
-  worker.on("error", (err) => {
-    console.error(`Worker error for ${appName}:`, err);
-    statusTracker.updateStatus(appName, "Failed");
-  });
+  // worker.on("error", (err) => {
+  //   console.error(`Worker error for ${appName}:`, err);
+  //   statusTracker.updateStatus(appName, "Failed");
+  // });
 
-  worker.on("exit", () => {
-    console.log(`Worker for ${appName} exited.`);
-  });
+  // worker.on("exit", () => {
+  //   console.log(`Worker for ${appName} exited.`);
+  // });
 
   res.json({ appName, message: "Project creation started" });
 });

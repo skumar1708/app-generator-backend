@@ -63,7 +63,7 @@ const repo = "app-1740483593831";       // Replace with the repository name
 const token = process.env.GIT_HUB_PAT;     // Replace with your GitHub personal access token
 
 async function deleteGitHubReposRobust(owner, token) {
-    const directoryPath = path.resolve(__dirname, "generated");
+    const directoryPath = path.resolve(process.cwd(), "generated");
     const repos = await getFolderNames(directoryPath);
     const deletePromises = repos.map(repo => {
       return deleteGitHubRepoRobust(owner, repo, token)

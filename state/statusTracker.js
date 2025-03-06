@@ -14,8 +14,14 @@ function updateStatus(appName, status, url) {
   }
 }
 
-function getStatuses() {
-  return projectStatuses;
+function getStatuses(appName) {
+  return projectStatuses[appName];
 }
 
-module.exports = { addStatus, updateStatus, getStatuses };
+function removeApp(appName){
+  console.log("Before deleting", projectStatuses)
+  delete projectStatuses[appName];
+  console.log("After deleting", projectStatuses)
+}
+
+module.exports = { addStatus, updateStatus, getStatuses, removeApp };

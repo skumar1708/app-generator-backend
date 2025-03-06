@@ -2,6 +2,8 @@ const { Mistral } = require("@mistralai/mistralai");
 const fs = require("fs");
 const path = require("path");
 const { gitPusher } = require("../../deployment/git/command-push");
+const { writeProject } = require("../util/write.projects");
+const statusTracker = require("../../state/statusTracker");
 const { createAndCheckDeployment } = require("../../deployment/vercel/vercel-sdk.deploy").default;
 const logger = require("../util/logger");
 
@@ -35,7 +37,7 @@ const generateCodeWithAI = async (prompt, type) => {
     return codeFiles;
   } catch (error) {
     console.error(`[AI Error] Failed to generate ${type} code:`, error);
-    throw new Error(`Failed to generate ${type} code.`);
+    // throw new Error(`Failed to generate ${type} code.`);
   }
 };
 
@@ -72,13 +74,17 @@ const createProjectFiles = async (appName, files, stack) => {
 const pushToGitHub = async (appName) => {
   try {
     console.log(`[GitHub] Publishing ${appName}...`);
+    statusTracker.addStatus(appName, "Publishing code to repository");
     await gitPusher(appName);
 
     console.log(`[Deployment] Starting deployment for ${appName}...`);
+    statusTracker.addStatus(appName, "Deploying application");
     let deployResp = await createAndCheckDeployment(appName);
 
     if (deployResp) {
       console.log(`[Deployment] Deployment successful: ${deployResp.deployConfig.deploymentURL}`);
+      statusTracker.addStatus(appName, "Deployment done ");
+      await writeProject({ repo: appName, ...deployResp });
       return deployResp.deployConfig.deploymentURL;
     } else {
       console.error(`[Deployment Error] Deployment failed for ${appName}`);

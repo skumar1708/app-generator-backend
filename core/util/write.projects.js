@@ -1,7 +1,7 @@
 const fs = require('fs').promises;
 const path = require('path');
 
-async function appendProjectToFile(project, filePath = path.join(__dirname, "projects.json")) {
+async function appendProjectToFile(project, filePath = path.join(process.cwd(), "misc/projects.json")) {
   try {
     let projects = [];
     try {
