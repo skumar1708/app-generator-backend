@@ -29,7 +29,7 @@ async function generateProject(appName, prompt, req) {
     let url = await pushToGitHub(appName);
 
     try {
-      const baseUrl = `${req.protocol}://${req.get('host')}`;
+      const baseUrl = `https://${req.get('host')}`;
       console.log("Base url is", baseUrl)
       axios.post(`${baseUrl}/deployed`, {appName, url, status: "Completed"});
       await new Promise((resolve) => setTimeout(resolve, 5000));
