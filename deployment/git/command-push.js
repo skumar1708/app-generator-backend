@@ -73,7 +73,7 @@ async function uploadFolder(folderPath, relativePath = "", APP_NAME) {
 }
 
 const gitPusher  =  async (appName) => {
-  const REPO_PATH =  path.resolve(process.cwd(), "generated", appName);
+  const REPO_PATH =  path.join("/tmp", "generated", appName);
   await createRepo(appName);
   await uploadFolder(REPO_PATH, "", appName);
   console.log("Repository upload complete!");

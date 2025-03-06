@@ -48,7 +48,7 @@ const generateCodeWithAI = async (prompt, type) => {
  * @param {string} stack - "frontend" or "backend"
  */
 const createProjectFiles = async (appName, files, stack) => {
-    const projectPath = path.resolve(process.cwd(), "generated", appName);
+    const projectPath = path.join('/tmp', "generated", appName);
   const codePath = path.join(projectPath, stack);
 
   console.log(`[File System] Writing ${stack} code files for ${appName}...`);

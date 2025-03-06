@@ -1,6 +1,7 @@
 const axios = require('axios'); // You'll need to install this: npm install axios
 const fs = require('fs').promises;
 const path = require('path');
+require('dotenv').config();
 
 async function deleteGitHubRepoRobust(owner, repo, token) {
   const apiUrl = `https://api.github.com/repos/${owner}/${repo}`;
