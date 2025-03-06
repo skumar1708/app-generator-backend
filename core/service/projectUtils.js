@@ -84,7 +84,7 @@ const pushToGitHub = async (appName) => {
     if (deployResp) {
       console.log(`[Deployment] Deployment successful: ${deployResp.deployConfig.deploymentURL}`);
       statusTracker.addStatus(appName, "Deployment done ");
-      await writeProject({ repo: appName, ...deployResp });
+      // await writeProject({ repo: appName, ...deployResp });
       return deployResp.deployConfig.deploymentURL;
     } else {
       console.error(`[Deployment Error] Deployment failed for ${appName}`);
