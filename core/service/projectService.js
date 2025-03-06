@@ -34,7 +34,7 @@ async function generateProject(appName, prompt, req) {
       axios.post(`${baseUrl}/deployed`, {appName, url, status: "Completed"});
       await new Promise((resolve) => setTimeout(resolve, 5000));
 
-      statusTracker.removeApp(appName);
+      // statusTracker.removeApp(appName);
 
     } catch(e) {
       console.log("Errror while making Internal Axios call");
